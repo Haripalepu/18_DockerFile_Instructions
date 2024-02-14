@@ -5,7 +5,7 @@ CMD ["nginx","-g","daemon off;"]
 
 ## Almalinux is same a centos.
 ## RUN is executed at the time of build an image. While building the image we have to install nginx.
-## CMD is executed at container run time. If nginx is running then only we can say container is running here systemctl won't work in a container so we are giving this command to CMD to keep run the service.
+## CMD is executed at container run time. If nginx is running then only we can say container is running here systemctl won't work in a container so we are giving ["nginx","-g","daemon off;"] command to CMD to keep the service running.
 
 ## The main purpose of the CMD command is to launch the software required in a container.
 
