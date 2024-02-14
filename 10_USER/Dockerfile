@@ -8,4 +8,5 @@ CMD ["sleep","1000"]
 
 ## adduser command will execute with root acess after the USER instruction the next commands will execute will hari user.
 
+## we are giving sleep 1000 sec to login to the container and check "id" it will show hari.
 
