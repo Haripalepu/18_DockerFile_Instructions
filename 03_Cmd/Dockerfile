@@ -1,7 +1,7 @@
 FROM almalinux:8
 RUN yum install nginx -y
-#CMD ["nginx","-g","daemon off;"]
-CMD ["service","nginx","start;"]
+CMD ["nginx","-g","daemon off;"]
+
 
 ## Almalinux is same a centos.
 ## RUN is executed at the time of build an image. While building the image we have to install nginx.
