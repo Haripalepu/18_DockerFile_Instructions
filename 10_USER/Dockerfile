@@ -1,7 +1,7 @@
 FROM almalinux:8
 RUN adduser hari
 USER hari
-CMD echo "The commands after USER instructionwill run with normal access"
+CMD ["echo", "The commands after USER instructionwill run with normal access"]
 
 
 ## We shouldn't run contianer with root access because all the containers are running on host if any user has root access he may access the underlying host storage.
