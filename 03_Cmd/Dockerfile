@@ -1,11 +1,13 @@
 FROM almalinux:8
 RUN yum install nginx -y
 #CMD ["nginx","-g","daemon off;"]
-CMD service nginx start
+CMD ["service","nginx","start;"]
 
 ## Almalinux is same a centos.
 ## RUN is executed at the time of build an image. While building the image we have to install nginx.
 ## CMD is executed at container run time. If nginx is running then only we can say container is running here systemctl won't work in a container so we are giving this command to CMD to keep run the service.
+
+## The main purpose of the CMD command is to launch the software required in a container.
 
 ##Multiple CMD will be allowed in a dockerfile but it will execute only the last one.
 
