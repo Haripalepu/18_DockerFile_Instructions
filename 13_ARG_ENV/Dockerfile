@@ -1,5 +1,5 @@
 ARG version
-FROM almalinux:${version:-8}
+FROM almalinux:${version:-8} 
 ARG username
 RUN adduser $username
 USER $username
@@ -15,14 +15,15 @@ CMD ["sleep","1000"]
 ## ENV can pass the arguments while building image and running container.
 
 ##To pass the VERSION,username,course,trainer during building an image
-## docker build -t <image_name>:<version> --build-arg <key>=<value> .
-## docker build -t arg:v1 --build-arg username=hari
+## docker build -t arg:v1 --build-arg version=8 --build-arg username=hari --build-arg COURSE=DevOps --build-arg TRAINER=siva .
+
 
 ##Run command will take the username from ARG and to ARG instruction we are passing via commnad during build.
 
 ## How can I use ARG variables inside container?
 ## Assign the values of ARG to ENV variables so that you can access them inside container as well
 
+## Other than FROM we can user ARG as first instruction.
 ## ARG instruction can be used before FROM instruction to provide values to FROM instruction.
 
-## ARG value deffnied before FROM will not be accessed after FROM
+## ARG value defined before FROM will not be accessed after FROM
