@@ -3,7 +3,7 @@ FROM centos:8
 
 
 
-## FROM is the first instruction in a dockerfile.
+## FROM is the first instruction in a dockerfile...
 
 ## Command to build image from this dockerfile for local use:
 ## docker build -t <image_name> . 
